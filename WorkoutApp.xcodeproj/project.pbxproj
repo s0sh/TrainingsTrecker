@@ -12,6 +12,7 @@
 		B560C3F92992C9B3007C61F1 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F82992C9B3007C61F1 /* BaseController.swift */; };
 		B560C3FE2992C9B5007C61F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B560C3FD2992C9B5007C61F1 /* Assets.xcassets */; };
 		B560C4012992C9B5007C61F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B560C3FF2992C9B5007C61F1 /* LaunchScreen.storyboard */; };
+		B57CC01B29AE5F3F00526734 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CC01A29AE5F3F00526734 /* BaseInfoView.swift */; };
 		B59E2CCA299B6F0400D7E931 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2CC9299B6F0400D7E931 /* TabBarController.swift */; };
 		B59E2CCE299B71B000D7E931 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2CCD299B71B000D7E931 /* UIColor+ext.swift */; };
 		B59E2CD1299B73B600D7E931 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2CD0299B73B600D7E931 /* Resources.swift */; };
@@ -37,6 +38,7 @@
 		B560C3FD2992C9B5007C61F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B560C4002992C9B5007C61F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B560C4022992C9B5007C61F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B57CC01A29AE5F3F00526734 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 		B59E2CC9299B6F0400D7E931 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B59E2CCD299B71B000D7E931 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		B59E2CD0299B73B600D7E931 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
@@ -111,6 +113,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		B57CC01929AE5F1700526734 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B59E2CEA29ACD14A00D7E931 /* BaseView.swift */,
+				B57CC01A29AE5F3F00526734 /* BaseInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B59E2CCB299B718D00D7E931 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,10 +164,9 @@
 		B59E2CD9299B972400D7E931 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B59E2CC9299B6F0400D7E931 /* TabBarController.swift */,
-				B59E2CD2299B862A00D7E931 /* NavBarController.swift */,
+				B57CC01929AE5F1700526734 /* Views */,
+				B59E2CF329AE500C00D7E931 /* Navigation */,
 				B560C3F82992C9B3007C61F1 /* BaseController.swift */,
-				B59E2CEA29ACD14A00D7E931 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -211,6 +221,15 @@
 				B59E2CEF29ACFDF500D7E931 /* WeekdayView.swift */,
 			);
 			path = WeekView;
+			sourceTree = "<group>";
+		};
+		B59E2CF329AE500C00D7E931 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B59E2CC9299B6F0400D7E931 /* TabBarController.swift */,
+				B59E2CD2299B862A00D7E931 /* NavBarController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +311,7 @@
 				B59E2CD3299B862A00D7E931 /* NavBarController.swift in Sources */,
 				B59E2CE0299B97E400D7E931 /* ProgressViewController.swift in Sources */,
 				B59E2CE7299BA73300D7E931 /* SecondaryButton.swift in Sources */,
+				B57CC01B29AE5F3F00526734 /* BaseInfoView.swift in Sources */,
 				B59E2CD1299B73B600D7E931 /* Resources.swift in Sources */,
 				B59E2CD8299B90EC00D7E931 /* UIView+ext.swift in Sources */,
 				B59E2CE2299B980400D7E931 /* SessionViewController.swift in Sources */,

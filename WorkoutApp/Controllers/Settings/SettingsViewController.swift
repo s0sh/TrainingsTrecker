@@ -12,7 +12,7 @@ class SettingsViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
-        navigationController?.tabBarItem.title = Resources.Strings.Tbbar.settings
+        navigationController?.tabBarItem.title = Resources.Strings.TabBar.title(for: .settings)
     }
 
 }

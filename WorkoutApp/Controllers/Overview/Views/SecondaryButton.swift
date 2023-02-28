@@ -28,7 +28,7 @@ final class SecondaryButton: UIButton {
     }
 }
 
-extension SecondaryButton {
+private extension SecondaryButton {
     
     func addViews() {
         addView(label)
