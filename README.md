@@ -1,1 +1,2 @@
 # TrainingsTrecker
+STATUS: In Progress
