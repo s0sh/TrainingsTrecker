@@ -8,9 +8,7 @@
 import UIKit
 
 class OverviewViewController: BaseController {
-    
     private let navBar = OverviewNavbar()
-   
 }
 
 extension OverviewViewController {

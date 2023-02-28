@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+    
     func addButtomBorder(with color: UIColor, height: CGFloat) {
         let separator = UIView()
         separator.backgroundColor = color
@@ -19,6 +20,7 @@ extension UIView {
         addSubview(separator)
     }
     
+    // MARK: - System behaviour for custom button
     func makeSystem(_ button: UIButton) {
         button.addTarget(self, action: #selector (handleIn), for: [
             .touchDown,
@@ -41,6 +43,8 @@ extension UIView {
         UIView.animate(withDuration: 0.15) { self.alpha = 1 }
     }
     
+    // MARK: - Needs for that so we wont add translatesAutoresizingMaskIntoConstraints for each newly added view
+    ///- substitution for regular addSubView UIView method
     func addView(_ view: UIView) {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
