@@ -49,5 +49,10 @@ extension UIView {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func setupView(_ view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
         
 }

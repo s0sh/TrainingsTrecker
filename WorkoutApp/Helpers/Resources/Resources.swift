@@ -58,7 +58,7 @@ enum Resources {
         enum TabBar {
              static func icon(for tab: Tabs) -> UIImage? {
                 switch tab {
-                case .overview: return UIImage(named: "overview tab")
+                case .overview: return UIImage(named: "overview_tab")
                 case .session: return UIImage (named: "session_tab")
                 case .progress: return UIImage (named: "progress_tab")
                 case .settings: return UIImage(named: "settings_tab")
