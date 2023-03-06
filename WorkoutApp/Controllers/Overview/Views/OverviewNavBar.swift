@@ -9,7 +9,12 @@ import UIKit
 
 final class OverviewNavbar: BaseView {
     
-    private let allWorkoutsButton = SecondaryButton()
+    private let allWorkoutsButton: WAButton = {
+       let button = WAButton(with: .secondary)
+        button.setTitle(R.Strings.Overview.allWorkoutsButtonTitle)
+        return button
+    }()
+    
     private let addButton = UIButton()
     private  let titleLabel = UILabel()
     private let weekView = WeekView()
@@ -28,7 +33,7 @@ final class OverviewNavbar: BaseView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        addButtomBorder(with: Resources.Colors.separator, height: 1)
+        addButtomBorder(with: R.Colors.separator, height: 1)
     }
 }
 
@@ -54,8 +59,7 @@ extension OverviewNavbar {
             allWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkoutsButton.trailingAnchor.constraint(equalTo: addButton.trailingAnchor, constant: -45),
             allWorkoutsButton.heightAnchor.constraint(equalToConstant: 28),
-            allWorkoutsButton.widthAnchor.constraint(equalToConstant: 130),
-            
+           
             titleLabel.centerYAnchor.constraint(equalTo: allWorkoutsButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWorkoutsButton.leadingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
@@ -73,14 +77,12 @@ extension OverviewNavbar {
         super.configureAppearance()
         
         backgroundColor = .white
-       
-        allWorkoutsButton.setTitle(Resources.Strings.Overview.allWorkoutsButtonTitle)
-        
-        addButton.setImage(Resources.Images.Common.addButton, for: .normal)
-        
-        titleLabel.text = Resources.Strings.NavBar.Title.overview
-        titleLabel.textColor = Resources.Colors.titleDarkGrey
-        titleLabel.font = Resources.Fonts.helveticaRegular(with: 22)
+    
+        addButton.setImage(R.Images.Common.addButton, for: .normal)
+    
+        titleLabel.text = R.Strings.NavBar.Title.overview
+        titleLabel.textColor = R.Colors.titleDarkGrey
+        titleLabel.font = R.Fonts.helveticaRegular(with: 22)
        
     }
 }

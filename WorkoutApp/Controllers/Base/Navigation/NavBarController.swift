@@ -16,9 +16,9 @@ final class NavBarController: UINavigationController {
     private func configure() {
         view.backgroundColor = .white
         navigationBar.isTranslucent = false
-        navigationBar.standardAppearance.titleTextAttributes = [.foregroundColor: Resources.Colors.titleDarkGrey,
-                                                                .font: Resources.Fonts.helveticaRegular(with: 17.0)]
-        navigationBar.addButtomBorder(with: Resources.Colors.separator,
+        navigationBar.standardAppearance.titleTextAttributes = [.foregroundColor: R.Colors.titleDarkGrey,
+                                                                .font: R.Fonts.helveticaRegular(with: 17.0)]
+        navigationBar.addButtomBorder(with: R.Colors.separator,
                                       height: 1)
         
     }

@@ -8,8 +8,8 @@
 import UIKit
 
 class SessionViewController: BaseController {
-    private let timerView: BaseInfoView = {
-       let view = BaseInfoView(with: "test")
+    private let timerView: WABaseInfoView = {
+        let view = WABaseInfoView(with: "test", buttonTitle: "Test Button".uppercased())
         
         return view
     }()
@@ -35,10 +35,10 @@ extension SessionViewController {
     
     override func configure() {
         super.configure()
-        title = Resources.Strings.NavBar.Title.session
-        navigationController?.tabBarItem.title = Resources.Strings.TabBar.title(for: .session)
-        addNavBarButton(at: .left, with: Resources.Strings.SessionButton.navBarLeft)
-        addNavBarButton(at: .right, with: Resources.Strings.SessionButton.navBarRight)
+        title = R.Strings.NavBar.Title.session
+        navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
+        addNavBarButton(at: .left, with: R.Strings.SessionButton.navBarLeft)
+        addNavBarButton(at: .right, with: R.Strings.SessionButton.navBarRight)
         
     }
 }
