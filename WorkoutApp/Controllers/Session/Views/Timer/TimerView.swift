@@ -10,7 +10,7 @@ import UIKit
 final class TimerView: WABaseInfoView {
     private let progressView: ProgressView = {
        let progress = ProgressView()
-        progress.draawProgress(with: 0.8)
+        progress.draawProgress(with: 0.0)
        return progress
     }()
 }

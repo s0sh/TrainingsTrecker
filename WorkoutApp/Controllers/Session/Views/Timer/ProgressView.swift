@@ -44,6 +44,13 @@ extension TimerView {
             dotPath.move(to: dotPoint)
             dotPath.addLine(to: dotPoint)
             
+            let bigDotLayer = CAShapeLayer()
+            bigDotLayer.path = dotPath.cgPath
+            bigDotLayer.fillColor = UIColor.clear.cgColor
+            bigDotLayer.strokeColor = Resources.Colors.active.cgColor
+            bigDotLayer.lineCap = .round
+            bigDotLayer.lineWidth = 20
+            
             let dotLayer = CAShapeLayer()
             dotLayer.path = dotPath.cgPath
             dotLayer.fillColor = UIColor.clear.cgColor
@@ -53,6 +60,7 @@ extension TimerView {
             
             layer.addSublayer(defaultCircleLayer)
             layer.addSublayer(circleLayer)
+            layer.addSublayer(bigDotLayer)
             layer.addSublayer(dotLayer)
         }
     }
