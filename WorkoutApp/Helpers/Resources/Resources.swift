@@ -42,8 +42,9 @@ enum Resources {
         }
         
         enum SessionButton {
-            static let navBarLeft = "Pause"
-            static let navBarRight = "Finish"
+            static let navBarPaused = "Pause"
+            static let navBarFinish = "Finish"
+            static let navBarStart = "Start   "
         }
         
         enum ProgressButton {

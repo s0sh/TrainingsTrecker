@@ -8,11 +8,31 @@
 import UIKit
 
 class SessionViewController: BaseController {
-    private let timerView: TimerView = {
-        let view = TimerView()
+    private let timerView = TimerView()
+    private let timerDuration = 3.0
+    
+    override func navBarLeftButtonHandler() {
+        super.navBarLeftButtonHandler()
         
-        return view
-    }()
+        if timerView.state == .isStopped {
+            timerView.startTimer()
+        } else {
+            timerView.pauseTimer()
+        }
+        
+        timerView.state = timerView.state == .isRunning ? .isStopped : .isRunning
+        
+        setTitleNavBarButton(timerView.state == .isRunning ?
+                             R.Strings.SessionButton.navBarPaused : R.Strings.SessionButton.navBarStart,
+                             at: .left)
+    }
+    
+    override func navBarRightButtonHandler() {
+        super.navBarRightButtonHandler()
+        timerView.stopTimer()
+        timerView.state = .isStopped
+        setTitleNavBarButton(R.Strings.SessionButton.navBarStart, at: .left)
+    }
 }
 
 extension SessionViewController {
@@ -20,6 +40,7 @@ extension SessionViewController {
     override func setupViews() {
         super.setupViews()
         view.setupView(timerView)
+        setTitleNavBarButton("Start", at: .left)
     }
     
     override func layoutViews() {
@@ -37,8 +58,9 @@ extension SessionViewController {
         super.configure()
         title = R.Strings.NavBar.Title.session
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
-        addNavBarButton(at: .left, with: R.Strings.SessionButton.navBarLeft)
-        addNavBarButton(at: .right, with: R.Strings.SessionButton.navBarRight)
+        addNavBarButton(at: .left, with: R.Strings.SessionButton.navBarStart)
+        addNavBarButton(at: .right, with: R.Strings.SessionButton.navBarFinish)
         
+        timerView.configure(with: timerDuration, progress: 1.5)
     }
 }
