@@ -15,7 +15,11 @@ class SessionViewController: BaseController {
         super.navBarLeftButtonHandler()
         
         if timerView.state == .isStopped {
-            timerView.startTimer()
+            timerView.startTimer { [weak self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    self?.navBarRightButtonHandler()
+                })
+            }
         } else {
             timerView.pauseTimer()
         }
