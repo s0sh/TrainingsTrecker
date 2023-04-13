@@ -23,7 +23,8 @@ class SessionViewController: BaseController {
         timerView.state = timerView.state == .isRunning ? .isStopped : .isRunning
         
         setTitleNavBarButton(timerView.state == .isRunning ?
-                             R.Strings.SessionButton.navBarPaused : R.Strings.SessionButton.navBarStart,
+                             R.Strings.Session.navBarPaused :
+                             R.Strings.Session.navBarStart,
                              at: .left)
     }
     
@@ -31,7 +32,7 @@ class SessionViewController: BaseController {
         super.navBarRightButtonHandler()
         timerView.stopTimer()
         timerView.state = .isStopped
-        setTitleNavBarButton(R.Strings.SessionButton.navBarStart, at: .left)
+        setTitleNavBarButton(R.Strings.Session.navBarStart, at: .left)
     }
 }
 
@@ -40,7 +41,7 @@ extension SessionViewController {
     override func setupViews() {
         super.setupViews()
         view.setupView(timerView)
-        setTitleNavBarButton("Start", at: .left)
+        setTitleNavBarButton(R.Strings.Session.navBarStart, at: .left)
     }
     
     override func layoutViews() {
@@ -49,8 +50,8 @@ extension SessionViewController {
         NSLayoutConstraint.activate([
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            timerView.heightAnchor.constraint(equalToConstant: 300)
+            timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
+           // timerView.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
     
@@ -58,9 +59,9 @@ extension SessionViewController {
         super.configure()
         title = R.Strings.NavBar.Title.session
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
-        addNavBarButton(at: .left, with: R.Strings.SessionButton.navBarStart)
-        addNavBarButton(at: .right, with: R.Strings.SessionButton.navBarFinish)
+        addNavBarButton(at: .left, with: R.Strings.Session.navBarStart)
+        addNavBarButton(at: .right, with: R.Strings.Session.navBarFinish)
         
-        timerView.configure(with: timerDuration, progress: 1.5)
+        timerView.configure(with: timerDuration, progress: 0.0)
     }
 }

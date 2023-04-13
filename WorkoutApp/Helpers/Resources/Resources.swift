@@ -41,10 +41,13 @@ enum Resources {
             }
         }
         
-        enum SessionButton {
+        enum Session {
             static let navBarPaused = "Pause"
             static let navBarFinish = "Finish"
             static let navBarStart = "Start   "
+            
+            static let elapsedTime = "Elapsed Time"
+            static let remeaningTime = "Remaining Time"
         }
         
         enum ProgressButton {
