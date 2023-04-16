@@ -18,6 +18,7 @@ enum Resources {
         static let titleDarkGrey = UIColor(hexString: "#545C77")
         static let backgroundMain = UIColor(hexString: "#F8f9F9")
         static let secondaryBackground = UIColor(hexString: "#F0F3FF")
+        static let subtitleColor = UIColor(hexString: "#D8D8D8")
     }
     
     enum Strings {
@@ -45,9 +46,17 @@ enum Resources {
             static let navBarPaused = "Pause"
             static let navBarFinish = "Finish"
             static let navBarStart = "Start   "
-            
             static let elapsedTime = "Elapsed Time"
             static let remeaningTime = "Remaining Time"
+            
+            enum Stats {
+                static let workoutStats = "workout stats".uppercased()
+                static let stepsCounter = "steps counter".uppercased()
+                static let heartRate = "heart rate".uppercased()
+                static let avaragePace = "avarege pace".uppercased()
+                static let totalSteps = "total steps".uppercased()
+                static let totalDistance = "total distance".uppercased()
+            }
         }
         
         enum ProgressButton {

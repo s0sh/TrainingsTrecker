@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "avarage_speed.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

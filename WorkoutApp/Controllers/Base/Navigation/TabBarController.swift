@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         sonfigureAppearance()
-       // switchTo(tab: .session)
+        switchTo(tab: .session)
     }
     
     required init?(coder: NSCoder) {

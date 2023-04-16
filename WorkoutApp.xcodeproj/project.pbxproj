@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B514B60429EBF8E2001B5E29 /* TimerPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514B60329EBF8E1001B5E29 /* TimerPercentView.swift */; };
 		B560C3F52992C9B3007C61F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F42992C9B3007C61F1 /* AppDelegate.swift */; };
 		B560C3F72992C9B3007C61F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F62992C9B3007C61F1 /* SceneDelegate.swift */; };
 		B560C3F92992C9B3007C61F1 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F82992C9B3007C61F1 /* BaseController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B514B60329EBF8E1001B5E29 /* TimerPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPercentView.swift; sourceTree = "<group>"; };
 		B560C3F12992C9B3007C61F1 /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B560C3F42992C9B3007C61F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B560C3F62992C9B3007C61F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B514B60529EC0E6F001B5E29 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		B514B60629EC0E78001B5E29 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		B560C3E82992C9B3007C61F1 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				B57CC01F29B5FFC800526734 /* Timer */,
+				B514B60629EC0E78001B5E29 /* Stats */,
+				B514B60529EC0E6F001B5E29 /* Steps */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +157,7 @@
 			children = (
 				B57CC01D29B5FF1200526734 /* TimerView.swift */,
 				B57CC02029B5FFE300526734 /* ProgressView.swift */,
+				B514B60329EBF8E1001B5E29 /* TimerPercentView.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -340,6 +359,7 @@
 				B59E2CD8299B90EC00D7E931 /* UIView+ext.swift in Sources */,
 				B59E2CE2299B980400D7E931 /* SessionViewController.swift in Sources */,
 				B560C3F72992C9B3007C61F1 /* SceneDelegate.swift in Sources */,
+				B514B60429EBF8E2001B5E29 /* TimerPercentView.swift in Sources */,
 				B59E2CEB29ACD14A00D7E931 /* BaseView.swift in Sources */,
 				B59E2CF029ACFDF500D7E931 /* WeekdayView.swift in Sources */,
 				B59E2CCE299B71B000D7E931 /* UIColor+ext.swift in Sources */,

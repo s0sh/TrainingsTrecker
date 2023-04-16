@@ -9,7 +9,10 @@ import UIKit
 
 class SessionViewController: BaseController {
     private let timerView = TimerView()
-    private let timerDuration = 3.0
+    private let timerDuration = 30.0
+    
+    private let statsView = WABaseInfoView(with: R.Strings.Session.Stats.workoutStats)
+    private let stepsView = WABaseInfoView(with: R.Strings.Session.Stats.stepsCounter)
     
     override func navBarLeftButtonHandler() {
         super.navBarLeftButtonHandler()
@@ -45,6 +48,10 @@ extension SessionViewController {
     override func setupViews() {
         super.setupViews()
         view.setupView(timerView)
+        
+        view.setupView(statsView)
+        view.setupView(stepsView)
+        
         setTitleNavBarButton(R.Strings.Session.navBarStart, at: .left)
     }
     
@@ -55,7 +62,7 @@ extension SessionViewController {
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
-           // timerView.heightAnchor.constraint(equalToConstant: 300)
+           
         ])
     }
     
