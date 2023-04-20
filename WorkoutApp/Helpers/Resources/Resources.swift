@@ -84,7 +84,15 @@ enum Resources {
         enum Common {
             static let allWorkoutButton = UIImage(named: "down_arrow")
             static let addButton = UIImage(named: "addButton")
-            
+        }
+        
+        enum Session {
+            enum Stats {
+                static let heartBeat = UIImage(named: "heart_beat")
+                static let averagePace = UIImage(named: "avarage_speed")
+                static let totalDistance = UIImage(named: "total_distance")
+                static let totalSteps = UIImage(named: "total_steps")
+            }
         }
     }
     

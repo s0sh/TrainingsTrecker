@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OverviewNavbar: BaseView {
+final class OverviewNavbar: WABaseView {
     
     private let allWorkoutsButton: WAButton = {
        let button = WAButton(with: .secondary)
