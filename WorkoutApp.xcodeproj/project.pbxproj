@@ -10,9 +10,10 @@
 		B50584FE29F3ED4600E33209 /* WABarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50584FD29F3ED4600E33209 /* WABarsView.swift */; };
 		B505850129F3F09700E33209 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505850029F3F09700E33209 /* BarView.swift */; };
 		B514B60429EBF8E2001B5E29 /* TimerPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514B60329EBF8E1001B5E29 /* TimerPercentView.swift */; };
+		B524E7522A33120D00B4A5E4 /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524E7512A33120D00B4A5E4 /* DailyPerformanceView.swift */; };
 		B560C3F52992C9B3007C61F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F42992C9B3007C61F1 /* AppDelegate.swift */; };
 		B560C3F72992C9B3007C61F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F62992C9B3007C61F1 /* SceneDelegate.swift */; };
-		B560C3F92992C9B3007C61F1 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F82992C9B3007C61F1 /* BaseController.swift */; };
+		B560C3F92992C9B3007C61F1 /* WABaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560C3F82992C9B3007C61F1 /* WABaseController.swift */; };
 		B560C3FE2992C9B5007C61F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B560C3FD2992C9B5007C61F1 /* Assets.xcassets */; };
 		B560C4012992C9B5007C61F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B560C3FF2992C9B5007C61F1 /* LaunchScreen.storyboard */; };
 		B565115329F04795002BD962 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B565115229F04795002BD962 /* StatsView.swift */; };
@@ -42,10 +43,11 @@
 		B50584FD29F3ED4600E33209 /* WABarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsView.swift; sourceTree = "<group>"; };
 		B505850029F3F09700E33209 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		B514B60329EBF8E1001B5E29 /* TimerPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPercentView.swift; sourceTree = "<group>"; };
+		B524E7512A33120D00B4A5E4 /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
 		B560C3F12992C9B3007C61F1 /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B560C3F42992C9B3007C61F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B560C3F62992C9B3007C61F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B560C3F82992C9B3007C61F1 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		B560C3F82992C9B3007C61F1 /* WABaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseController.swift; sourceTree = "<group>"; };
 		B560C3FD2992C9B5007C61F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B560C4002992C9B5007C61F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B560C4022992C9B5007C61F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,22 @@
 				B505850029F3F09700E33209 /* BarView.swift */,
 			);
 			path = Bars;
+			sourceTree = "<group>";
+		};
+		B524E74F2A3311B600B4A5E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B524E7502A3311DD00B4A5E4 /* Performance */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B524E7502A3311DD00B4A5E4 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				B524E7512A33120D00B4A5E4 /* DailyPerformanceView.swift */,
+			);
+			path = Performance;
 			sourceTree = "<group>";
 		};
 		B560C3E82992C9B3007C61F1 = {
@@ -237,7 +255,7 @@
 			children = (
 				B57CC01929AE5F1700526734 /* Views */,
 				B59E2CF329AE500C00D7E931 /* Navigation */,
-				B560C3F82992C9B3007C61F1 /* BaseController.swift */,
+				B560C3F82992C9B3007C61F1 /* WABaseController.swift */,
 				B59E2CE6299BA73300D7E931 /* WAButton.swift */,
 			);
 			path = Base;
@@ -272,6 +290,7 @@
 		B59E2CDE299B978E00D7E931 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				B524E74F2A3311B600B4A5E4 /* Views */,
 				B59E2CDF299B97E400D7E931 /* ProgressViewController.swift */,
 			);
 			path = Progress;
@@ -375,7 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59E2CEE29ACF66000D7E931 /* WeekView.swift in Sources */,
-				B560C3F92992C9B3007C61F1 /* BaseController.swift in Sources */,
+				B560C3F92992C9B3007C61F1 /* WABaseController.swift in Sources */,
 				B59E2CCA299B6F0400D7E931 /* TabBarController.swift in Sources */,
 				B59E2CE929ACD07600D7E931 /* OverviewNavBar.swift in Sources */,
 				B560C3F52992C9B3007C61F1 /* AppDelegate.swift in Sources */,
@@ -383,6 +402,7 @@
 				B59E2CD3299B862A00D7E931 /* NavBarController.swift in Sources */,
 				B59E2CE0299B97E400D7E931 /* ProgressViewController.swift in Sources */,
 				B59E2CE7299BA73300D7E931 /* WAButton.swift in Sources */,
+				B524E7522A33120D00B4A5E4 /* DailyPerformanceView.swift in Sources */,
 				B57CC01B29AE5F3F00526734 /* WABaseInfoView.swift in Sources */,
 				B57CC01E29B5FF1200526734 /* TimerView.swift in Sources */,
 				B57CC02129B5FFE300526734 /* ProgressView.swift in Sources */,

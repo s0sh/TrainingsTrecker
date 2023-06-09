@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SessionViewController: BaseController {
+class SessionViewController: WABaseController {
     private let timerView = TimerView()
     private let timerDuration = 30.0
     
@@ -75,8 +75,8 @@ extension SessionViewController {
         ])
     }
     
-    override func configure() {
-        super.configure()
+    override func configureAppearance() {
+        super.configureAppearance()
         title = R.Strings.NavBar.Title.session
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
         addNavBarButton(at: .left, with: R.Strings.Session.navBarStart)

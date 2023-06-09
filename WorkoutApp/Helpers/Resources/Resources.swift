@@ -62,6 +62,9 @@ enum Resources {
         enum ProgressButton {
             static let navBarLeft = "Export"
             static let navBarRight = "Details"
+            static let dailyPerformance = "Daily Performance"
+            static let lastSevenDays = "Last 7 days"
+            
         }
         
         enum Overview {

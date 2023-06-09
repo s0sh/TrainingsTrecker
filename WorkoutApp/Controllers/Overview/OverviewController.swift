@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OverviewViewController: BaseController {
+final class OverviewViewController: WABaseController {
     private let navBar = OverviewNavbar()
 }
 
@@ -28,8 +28,8 @@ extension OverviewViewController {
         
     }
     
-    override func configure() {
-        super.configure()
+    override func configureAppearance() {
+        super.configureAppearance()
         navigationController?.navigationBar.isHidden = true
     }
     

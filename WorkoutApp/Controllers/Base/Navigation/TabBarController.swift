@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         sonfigureAppearance()
-        switchTo(tab: .session)
+        switchTo(tab: .progress)
     }
     
     required init?(coder: NSCoder) {
@@ -50,7 +50,7 @@ final class TabBarController: UITabBarController {
         setViewControllers(controllers, animated: false)
     }
     
-    private func getController(for tab: Tabs) -> BaseController {
+    private func getController(for tab: Tabs) -> WABaseController {
         switch tab {
         case .overview: return OverviewViewController()
         case .progress: return ProgressViewController()

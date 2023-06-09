@@ -12,24 +12,24 @@ enum NavBarPosition {
     case right
 }
 
-class BaseController: UIViewController {
+class WABaseController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         layoutViews()
-        configure()
+        configureAppearance()
     }
     
 }
 
-@objc extension BaseController {
+@objc extension WABaseController {
     
     func setupViews() {}
     
     func layoutViews() {}
     
-    func configure() {
+    func configureAppearance() {
         view.backgroundColor = R.Colors.backgroundMain
     }
     
@@ -42,7 +42,7 @@ class BaseController: UIViewController {
     }
 }
 
-extension BaseController {
+extension WABaseController {
     func addNavBarButton(at position: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
